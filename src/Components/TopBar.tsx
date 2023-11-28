@@ -4,7 +4,7 @@ import { BsX, BsFillPersonFill } from "react-icons/bs"
 import { useState , useEffect, useRef } from "react"
 
 type SliderProps = {
-	modal: bool;
+	modal: boolean;
 	closeModal: () => void;
 	users: string[];
 }
@@ -75,7 +75,7 @@ type TopBarProps = {
 const TopBar = ({ usersList }: TopBarProps) => {
 	
 	const [ name, setName ] = useState<string>('')
-	const [ modal, setModal ] = useState<bool>(false)
+	const [ modal, setModal ] = useState<boolean>(false)
 
 	function fetchName():string {
 		const User = JSON.parse(localStorage.getItem('Login'))
