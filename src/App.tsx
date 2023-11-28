@@ -9,7 +9,7 @@ import { Routes, Route, Link } from "react-router-dom"
 
 function AppView() {
 
-  const [ UsernameAlreadySelected, setUsernameAlreadySelected ] = useState<bool>(false);
+  const [ UsernameAlreadySelected, setUsernameAlreadySelected ] = useState<boolean>(false);
   
   const [ userList, setUserList ] = useState(); 
   
