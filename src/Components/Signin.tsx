@@ -11,7 +11,7 @@ type SigninProps = {
 }
 
 const Signin = () => {
-  const [ visible, setVisible ] = useState<bool>(false);
+  const [ visible, setVisible ] = useState<boolean>(false);
   const [ userInfo, setUserInfo ] = useState<Object>({
     userName: '',
     roomID: ''
