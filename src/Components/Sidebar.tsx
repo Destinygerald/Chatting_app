@@ -51,8 +51,8 @@ type SidebarProps = {
 }
 
 const Sidebar = ({users}: SidebarProps) => {
-	const [ opened, setOpened ] = useState<bool>(false);
-	const [ tick, setTick ] = useState<bool>(false);
+	const [ opened, setOpened ] = useState<boolean>(false);
+	const [ tick, setTick ] = useState<boolean>(false);
 	const [ name, setName ] = useState<string>('');
 	const [ roomID, setRoomID ] = useState<string>('');
 	const UserInfo = JSON.parse(localStorage.getItem('Login'))
