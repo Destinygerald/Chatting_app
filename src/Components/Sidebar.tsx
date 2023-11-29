@@ -133,7 +133,7 @@ const Sidebar = ({users}: SidebarProps) => {
 					users?.map((user, idx) => {
 					
 						if (user !== name ) {
-							console.log(users)
+							// console.log(users)
 							return (
 								<User name={user} id={idx.toString()} key={idx} />
 							)
