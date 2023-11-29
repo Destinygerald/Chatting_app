@@ -42,15 +42,19 @@ const Signin = () => {
   }
 
 
-  function submitHandler(e: SubmitEvent){
+  //@ts-ignore
+  function submitHandler(e){
     e.preventDefault();
+    //@ts-ignore
     if (!userInfo?.userName) {
       console.log("No username")
       return
     };
 
+    //@ts-ignore
     let username = userInfo?.userName
 
+    //@ts-igonre
     handleUsername(username);
 
     localStorage.setItem('Login', JSON.stringify(userInfo))
