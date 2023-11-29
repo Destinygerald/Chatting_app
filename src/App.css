@@ -384,7 +384,7 @@
   align-self: flex-end !important;
 }
 
-@media only screen (600px <= width <= 992px) {
+@media only screen and (600px <= width <= 992px) {
   .sidebar-button > span:first-child {
     visibility: hidden;
     display: none;
@@ -408,7 +408,7 @@
   }
 }
 
-@media only screen ( width < 600px ) {
+@media only screen and ( width < 600px ) {
   body {
     /*height: 100px;*/
   }
