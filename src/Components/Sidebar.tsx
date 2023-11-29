@@ -23,7 +23,7 @@ function changeUser(id: number){
 	const Users = document.querySelectorAll(".user")
 	Users?.forEach(user => {
 	
-		if (user.id == id)
+		if (parseInt(user?.id) == id)
 		{	
 			changeChat(user.id)
 			Users.forEach(user => {
@@ -38,7 +38,7 @@ function changeUser(id: number){
 
 
 	return (
-		<div onClick={() => {changeUser(id)}} className="user" id={id}>
+		<div onClick={() => {changeUser(id)}} className="user" id={parseInt(id)}>
 			<span className="user-icon"><BsFillPersonFill /></span>
 			<span>{name}</span>
 			{/*<div className="online" />*/}
@@ -57,7 +57,7 @@ const Sidebar = ({users}: SidebarProps) => {
 	const [ roomID, setRoomID ] = useState<string>('');
 	const UserInfo = JSON.parse(localStorage.getItem('Login'))
 
-	function fetchName():string {
+	function fetchName() {
 		const User = JSON.parse(localStorage.getItem('Login'))
 		setName(User?.userName)
 	}
@@ -126,9 +126,10 @@ const Sidebar = ({users}: SidebarProps) => {
 						?
 
 					users?.map((user, idx) => {
-						if (user !== name ) {
+						if (user?.userName !== name ) {
 							return (
-								<User name={user} id={idx} key={idx} />
+								//@ts-ignore
+								<User name={user.userName} id={idx} key={idx} />
 							)
 						}
 					})
