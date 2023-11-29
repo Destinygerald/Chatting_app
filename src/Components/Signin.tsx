@@ -19,7 +19,7 @@ const Signin = () => {
   const [ visible, setVisible ] = useState<boolean>(false);
   const [ userInfo, setUserInfo ] = useState<userInfoProp>({
     userName: '',
-    roomID: ''
+    roomID: 0
   });
 
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const Signin = () => {
   function handleClear() {
     setUserInfo({
       userName: '',
-      roomID: ''
+      roomID: 0
     });
   }
 
