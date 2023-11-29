@@ -46,8 +46,13 @@ function changeUser(id: number){
 	)
 }
 
+type userInfoProp = {
+	userName: string,
+	roomID: number
+}
+
 type SidebarProps = {
-	users: Object[];
+	users: userInfoProp[];
 }
 
 const Sidebar = ({users}: SidebarProps) => {
