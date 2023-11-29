@@ -21,6 +21,7 @@ const Slider = ({ modal, closeModal, users }) => {
 
 			if (sliderRef.current == null) return;
 
+			//@ts-ignore
 			if (!sliderRef.current?.contains(e.target)){
 				closeModal()
 			}
@@ -77,7 +78,7 @@ const TopBar = ({ usersList }: TopBarProps) => {
 	const [ name, setName ] = useState<string>('')
 	const [ modal, setModal ] = useState<boolean>(false)
 
-	function fetchName():string {
+	function fetchName() {
 		const User = JSON.parse(localStorage.getItem('Login'))
 		setName(User.username)
 	}
