@@ -134,7 +134,7 @@ const Sidebar = ({users}: SidebarProps) => {
 					
 						if (user?.userName !== name ) {
 							return (
-								<User name={user.userName} id={idx} key={idx} />
+								<User name={user.userName} id={idx} key={idx.toString()} />
 							)
 						}
 					})
