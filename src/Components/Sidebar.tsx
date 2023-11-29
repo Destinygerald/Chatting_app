@@ -52,7 +52,7 @@ type userInfoProp = {
 }
 
 type SidebarProps = {
-	users: userInfoProp[];
+	users: string[];
 }
 
 const Sidebar = ({users}: SidebarProps) => {
@@ -132,10 +132,10 @@ const Sidebar = ({users}: SidebarProps) => {
 
 					users?.map((user, idx) => {
 					
-						if (user?.userName !== name ) {
+						if (user !== name ) {
 							console.log(users)
 							return (
-								<User name={user.userName} id={idx.toString()} key={idx} />
+								<User name={user} id={idx.toString()} key={idx} />
 							)
 						}
 					})
