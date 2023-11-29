@@ -13,6 +13,7 @@ export function ProfileContextFunction() {
 	)	
 }
 
+//@ts-ignore
 export function ProfileContextProvider({children}: ReactNode) {
 	
 	const [ username, setUsername ] = useState<string>('');
