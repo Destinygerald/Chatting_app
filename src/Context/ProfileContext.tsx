@@ -2,7 +2,7 @@ import { useContext, createContext, useState } from "react";
 
 type ProfileContextProps = {
 	username: string;
-	handleUsername: () => void;
+	handleUsername: (name: string) => void;
 }
 
 const ProfileContext = createContext({} as ProfileContextProps)
