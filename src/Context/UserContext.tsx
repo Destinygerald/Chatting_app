@@ -14,6 +14,7 @@ export function UserContextFunction(){
 
 }
 
+//@ts-ignore
 export function UserContextProvider({children}: ReactNode){
 	const [ userId, setUserId ] = useState<string>("0");
 
