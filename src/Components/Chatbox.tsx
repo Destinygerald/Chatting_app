@@ -18,7 +18,7 @@ type ChatboxProps = {
 const Inputter = ({ message, send, messageSetter }:InputterProps) => {
 	return (
 		<div className="inputter">
-			<textarea id="my-text" placeholder="Type message here..." value={message} onChange={(e) => messageSetter(e)} />
+			<textarea id="my-text" placeholder="Type message here..." value={message} onChange={messageSetter} />
 			<div className="inputter-button" onClick={send}><BsFillSendFill /></div>
 		</div>
 	)
@@ -137,7 +137,7 @@ const Chatbox = ({ usersList }: ChatboxProps) => {
 		<div className="chatbox">
 			<TopBar usersList={usersList} />
 			<Chatview />
-			<Inputter message={message} messageSetter={messageHandler} send={sendMessage} />
+			<Inputter message={message} messageSetter={(e) => messageHandler(e)} send={sendMessage} />
 		</div>
 	)
 }
