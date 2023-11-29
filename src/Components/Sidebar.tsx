@@ -131,10 +131,9 @@ const Sidebar = ({users}: SidebarProps) => {
 						?
 
 					users?.map((user, idx) => {
-						//@ts-ignore
+					
 						if (user?.userName !== name ) {
 							return (
-								//@ts-ignore
 								<User name={user.userName} id={idx} key={idx} />
 							)
 						}
