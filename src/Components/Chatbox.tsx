@@ -8,7 +8,7 @@ import TopBar from "./TopBar";
 type InputterProps = {
 	message: string;
 	send: () => void;
-	messageSetter: () => void;
+	messageSetter: (e: any) => void;
 }
 
 type ChatboxProps = {
