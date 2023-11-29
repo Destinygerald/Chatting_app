@@ -10,9 +10,14 @@ type SigninProps = {
   onInput: (username:string) => void;
 }
 
+type userInfoProp = {
+	userName: string,
+	roomID: number
+}
+
 const Signin = () => {
   const [ visible, setVisible ] = useState<boolean>(false);
-  const [ userInfo, setUserInfo ] = useState<Object>({
+  const [ userInfo, setUserInfo ] = useState<userInfoProp>({
     userName: '',
     roomID: ''
   });
