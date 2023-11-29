@@ -38,7 +38,7 @@ function changeUser(id: number){
 
 
 	return (
-		<div onClick={() => {changeUser(id)}} className="user" id={parseInt(id)}>
+		<div onClick={() => {changeUser(parseInt(id))}} className="user" id={id}>
 			<span className="user-icon"><BsFillPersonFill /></span>
 			<span>{name}</span>
 			{/*<div className="online" />*/}
@@ -126,6 +126,7 @@ const Sidebar = ({users}: SidebarProps) => {
 						?
 
 					users?.map((user, idx) => {
+						//@ts-ignore
 						if (user?.userName !== name ) {
 							return (
 								//@ts-ignore
